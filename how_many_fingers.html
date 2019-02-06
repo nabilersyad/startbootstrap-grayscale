@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How Many</title>
+  </head>
+
+  <body>
+
+
+    <p>
+      How many fingers am I holding up? <br />
+      Input your guess in box below.
+      </p>
+    <input type="text" id="box" />
+    <button id="submit"> Guess bitch</button>
+
+    <script type="text/javascript">
+
+      document.getElementById("submit").onclick = function() {
+        var x = "oh you got it right";
+        var y = "wrong dumbass";
+        var actual_num = Math.floor((Math.random() * 5) + 1);
+        var guess_num = document.getElementById("box").value;
+        console.log(actual_num);
+        if(actual_num == guess_num){
+          alert(x);
+        }
+        else{
+          alert(y);
+        }
+      }
+
+    </script>
+
+  </body>
+
+
+</html>

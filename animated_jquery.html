@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Animation</title>
+    <style type="text/css">
+
+      #circle{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: red;
+      }
+
+    </style>
+
+  </head>
+
+
+  <body>
+    <div id="circle">
+      </div>
+
+
+    <script type="text/javascript">
+      $("#circle").click(function(){
+        $(this).animate({
+          width:"400px",
+          height:"400",
+          marginLeft: "500px",
+        },2000, function (){
+          $(this).css("background-color", "green");
+        });
+      });
+
+      $.get("random", function(data){
+        alert(data);
+      });
+
+      $.ajax("random").done(function(data2){
+        alert(data2);
+      });
+
+
+      var regex = /something/;
+      var string = "is something fun or not.";
+      var result = string.match(regex);
+      alert(result);
+    </script>
+  </body>
+</html>

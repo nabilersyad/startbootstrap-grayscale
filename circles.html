@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+    <style type="text/css">
+      .circle {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      float:left;
+      margin:50px;
+    }
+    .square{
+      height: 25px;
+      width: 25px;
+      float:left;
+      margin:50px;
+    }
+
+      #red{
+        background-color: red;
+      }
+
+      #yellow{
+        background-color: yellow;
+      }
+
+      #blue{
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+
+
+
+  <body>
+    <div class="circle" id="red">
+    </div>
+    <div class="circle" id="blue">
+    </div>
+    <div class="circle" id="yellow">
+    </div>
+    <div class="square" id="red">
+    </div>
+    <div class="square" id="blue">
+    </div>
+    <div class="square" id="yellow">
+    </div>
+
+
+    <input type="text" id="input"/>
+    <button id="changer">Change</button>
+    <p id="new">
+      something new
+    </p>
+
+    <div>
+      <input type="text" id="user" />
+      <button id="submit">submit</button>
+    </div>
+
+    <script type="text/javascript">
+
+      document.getElementById("red").onclick = function() {
+        document.getElementById("red").style.display ="none";
+        document.getElementById("red").innerHTML = " red";
+      }
+
+      document.getElementById("changer").onclick =function(){
+        var text = "";
+        text = document.getElementById("input").value;
+        document.getElementById("new").innerHTML = text;
+      }
+
+      var myArray = new Array();
+      myArray[0] = "cat";
+      myArray[1] = "dog";
+      console.log(myArray);
+      alert(myArray[1]);
+
+      myArray.push("meow");
+
+      myArray.splice(1,1); // for deleting or adding arrays anywhere in arrays //(position, how many elements)
+
+      document.getElementById("submit").onclick = alertMePlis;
+
+
+      function alertMePlis(){
+        var username = document.getElementById("user").value;
+
+
+        if(username== "nabil"){
+          alert("You are nabil");
+        }
+        else{
+          alert("who you");
+        }
+
+      }
+
+    </script>
+  </body>
+</html>

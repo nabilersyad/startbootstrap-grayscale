@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery UI</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css "src="jquery-ui-1.12.1/jquery-ui.min.css"></style>
+    <style type="text/css">
+
+      #draggy:hover {
+        text-decoration: underline;
+        cursor: grabbing;
+      }
+
+      #container{
+        width: 400px;
+        height: 400px;
+        background-color: pink;
+      }
+
+      #droppy{
+        width: 200px;
+        height:200px;
+        background-color: yellow;
+      }
+
+      #putmehere{
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+      }
+    </style>
+
+
+  </head>
+
+
+  <body>
+
+    <div id="draggy">
+      Draggggggg bit
+      </div>
+    <div id="container">
+      <span id="babs">Babi terbang dalam kotak je</span>
+    </div>
+
+    <div id="droppy">
+      caryy me
+      </div>
+
+    <div id="putmehere">
+      hereeee
+    </div>
+    <script type="text/javascript">
+      $("#draggy").draggable({axis:"y"});
+      $("#babs").draggable({containment:"#container"});
+
+      $("#droppy").draggable();
+
+
+      $("#putmehere").droppable({
+        drop: function(event, ui){
+          $("#putmehere").css("background-color","black");
+        }
+      })
+
+    </script>
+
+  </body>
+</html>

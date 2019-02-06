@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+      #circle{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin:10px;
+      }
+      .square{
+        border-radius: 0;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin:10px;
+      }
+      #toggle_text{
+        display: none;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    Hi bro
+    <div id="circle">
+    </div>
+
+    <p>
+      texthmbjhvgjg gbhgvhg bhbkjkjjjj;mm
+      </p>
+      <button type="button" id="fade"> when ptresees</button>
+    <div class="square">
+    </div>
+    <div class="square">
+    </div>
+
+    <div id="toggle_text">
+      Click the button to appear and disappear.
+    </div>
+    
+    <button type="button" id="toggle">Hello Press please</button>
+
+    <script type="text/javascript">
+      $("#circle").click(function () {
+        $("#circle").css("width", "400px");
+        alert($("body").css("width"));
+      });
+      $("div").click(function () {
+        $(this).fadeOut();
+      });
+
+      $("#fade").click(function(){
+        $("p").fadeOut();
+      })
+
+      $("#toggle").click(function(){
+        if($("#toggle_text").css("display")=="none"){
+          $("#toggle_text").fadeIn();
+        }
+        else{
+            $("#toggle_text").fadeOut();
+        }
+      })
+    </script>
+  </body>
+</html>

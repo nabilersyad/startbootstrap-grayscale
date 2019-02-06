@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+
+  </head>
+
+
+  <body>
+    <p id="intro">
+      Hello ayyyyy
+    </p>
+    <button id="button"> Click Me</button>
+    <p id="second">
+      this is newwww
+      </p>
+
+    <button id="secondbutton">add</button>
+
+    <p id="nothing">
+
+      </p>
+    <button id="thirdbutton">add</button>
+
+    <p id="style">
+      some stuff
+      </p>
+      <button id="buttonstyle"> styleee </button>
+
+    <script type="text/javascript">
+      alert("meow");
+      //document.getElementById("intro").innerHTML = "Yo whats up";
+      document.getElementById("button").onclick = function(){
+      document.getElementById("intro").innerHTML = "changeddd";
+
+      }
+      document.getElementById("secondbutton").onclick = function(){
+      document.getElementById("second").innerHTML = document.getElementById("second").innerHTML + "the shit";
+      }
+      document.getElementById("thirdbutton").onclick = function(){
+      document.getElementById("nothing").innerHTML = "something";
+      }
+
+
+      document.getElementById("buttonstyle").onclick = function() {
+        document.getElementById("style").style.color = "red";
+
+      }
+    </script>
+  </body>
+</html>

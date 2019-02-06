@@ -1,0 +1,41 @@
+body {
+  background-color: #ffffff;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+
+
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+#top {
+  color: #1da1f2;
+  width: auto;
+  margin: auto;
+  border-radius: 0;
+  padding: 1em;
+  background-color: #f1f2ff;
+  text-align: center;
+}
+
+h5{
+  width: 70%;
+}
+
+.list{
+
+}
+
+#table1{
+  border: 1px black solid;
+}
+#table2{
+  border: 5px black solid;
+}
